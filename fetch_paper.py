@@ -1,23 +1,3 @@
-# import requests
-# from bs4 import BeautifulSoup
-# def fetch(url):
-    
-#     response = requests.get(url)
-
-#     soup = BeautifulSoup(response.text,'lxml')
-#     titles = soup.find_all("span", class_="accepted-paper-title")
-
-#     res = [tag.get_text(strip = True) for tag in titles]
-#     return res[:10]
-# if __name__ == "__main__":
-#     url = "https://sigir2025.dei.unipd.it/accepted-papers.html"  
-#     found = fetch(url)
-#     for idx, t in enumerate(found, start=1):
-#         print(f"{idx}. {t}")
-#         if t == 'FairDiverse: A Comprehensive Toolkit for Fairness- and Diversity-aware Information Retrieval':
-#             print('这是第{}个'.format(idx))
-
-
 import requests
 from bs4 import BeautifulSoup
 
@@ -55,3 +35,4 @@ if __name__ == "__main__":
         print(f"{idx}. {t}")
         if t == 'FairDiverse: A Comprehensive Toolkit for Fairness- and Diversity-aware Information Retrieval':
             print('这是第{}个'.format(idx))
+
