@@ -107,3 +107,5 @@ if __name__ == "__main__":
             json.dump(citations, f, ensure_ascii=False, indent=2)
         driver.quit()
         print("\n已保存 citations_selenium.json，浏览器已关闭。")
+        print("请在终端输入 streamlit run website.py")
+
