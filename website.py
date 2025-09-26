@@ -4,6 +4,9 @@ import json
 import os
 import subprocess
 
+st.set_page_config(page_title="Citations in Google Scholar")
+st.title("📑 Citations in Google Scholar")
+
 base_path = os.path.dirname(__file__)
 file_name = 'citations_selenium.json'
 file_path = os.path.join(base_path,file_name)
@@ -33,4 +36,5 @@ CAPTCHA）问题，导致部分论文引用数无法获取。
     - 若需要更新数据，请点击上方“更新”按钮，程序会重新运行 `get_citations.py` 脚本。
     - 请确保在运行环境中已正确配置 Selenium 和 ChromeDriver。
     """)
+
 
