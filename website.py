@@ -21,7 +21,7 @@ with open(file_path,'r',encoding='utf-8') as all:
     df = pd.DataFrame(list(papers.items()), columns=["论文标题", "引用数"])
     df.index = df.index + 1
 
-    query = st.text_input("🔍 输入论文标题关键词进行搜索")
+    query = st.text_input("输入论文标题关键词进行搜索")
     if query:
         filtered_df = df[df["论文标题"].str.contains(query, case=False, na=False)]
         st.dataframe(filtered_df)
@@ -36,6 +36,7 @@ CAPTCHA）问题，导致部分论文引用数无法获取。
     - 若需要更新数据，请点击上方“更新”按钮，程序会重新运行 `get_citations.py` 脚本。
     - 请确保在运行环境中已正确配置 Selenium 和 ChromeDriver。
     """)
+
 
 
 
