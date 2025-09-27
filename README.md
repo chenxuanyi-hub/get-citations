@@ -41,6 +41,7 @@ pip install requests beautifulsoup4 selenium webdriver-manager streamlit pandas
     - 在 VSCode 或终端运行 [`get_citations.py`](https://github.com/chenxuanyi-hub/get-citations/blob/main/get_citations.py)，自动获取论文的引用数
     - 运行过程中会弹出 Google Scholar 页面，请手动完成人机验证（约每 280 篇需验证一次）
     - 若验证超时，部分引用数会记为 `null`，并提示超时
+    - 搜索完论文列表的引用数后，会使用字典{论文名：引用数}生产json文件，[`citations_selenium.json`](https://github.com/chenxuanyi-hub/get-citations/blob/main/citations_selenium.json)
 
 2. **数据保存与展示**
     - 程序结束后，终端显示：
