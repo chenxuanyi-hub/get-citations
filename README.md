@@ -8,3 +8,24 @@ website.py用于呈现论文和引用数，提供更新功能和搜索功能。
 
 只需在vscode中运行get_citations.py，可以获得citations_selenium.json文件。
 后再终端中输入   streamlit run website.py即可打开网页。
+
+对于fetch_paper.py，需要用到的模块及作用分别是：
+  requests，用于请求网页
+  bs4 ,用于解析html文件为DOM树
+
+对于get_citations.py，需要用到的模块及作用分别是：
+  time、random，用于在访问之后等待随机数，来模仿人类访问的行为
+  json，用于将获得的论文名称和引用数的字典转为json文件
+  re，用于搜索引用数，最开始是为了防止数字之间存在逗号所以使用正则表达式，但发现谷歌学术上引用数无逗号
+  BeautifulSoup，用于解析网页
+  from webdriver_manager.chrome import ChromeDriverManager；from selenium import webdriver； from selenium.webdriver.chrome.service import Service 用来作为浏览器驱动，人为的解决人机验证问题，是对于谷歌学术反爬虫手段的应对
+  fetch_paper，用于获取论文列表
+
+对于website.py，需要用到的模块及作用分别是：
+  streamlit，用于网页的制作与呈现
+  pandas，用于制表
+  json，用于读入get_citations.py获得的json文件
+  os，用于添加json文件路径，方便后期修改
+  subprocess，用于网页更新，点下更新按钮之后，会开启一个子进程，再次运行get_citations.py
+
+本项目使用到的库函数较多，在运行前请先确认环境是否已经配好，可在终端里使用pip list确认自己安装的库，若没有安装，使用 pip install <模块名>来进行安装
