@@ -12,25 +12,26 @@
 
 ## 文件说明
 
-- `fetch_paper.py`  
+- [`fetch_paper.py`](https://github.com/chenxuanyi-hub/get-citations/blob/main/fetch_paper.py)  
   获取 SIGIR 论文列表。论文数量可通过修改 return 函数调整。
-- `get_citations.py`  
+- [`get_citations.py`](https://github.com/chenxuanyi-hub/get-citations/blob/main/get_citations.py)  
   主程序，自动调用 `fetch_paper.py`，获取 Google Scholar 引用数。
-- `website.py`  
+- [`website.py`](https://github.com/chenxuanyi-hub/get-citations/blob/main/website.py)  
   使用 Streamlit 制作网页，展示论文与引用数，支持搜索和数据更新。
 
 ## 依赖库
 
 请确保已安装以下 Python 库：
 
-- requests
-- beautifulsoup4
-- selenium
-- webdriver-manager
-- streamlit
-- pandas
-- json
-- -re
+- [`requests`](https://docs.python-requests.org/en/master/)
+- [`beautifulsoup4`](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+- [`selenium`](https://selenium-python.readthedocs.io/)
+- [`webdriver-manager`](https://github.com/SergeyPirogov/webdriver_manager)
+- [`streamlit`](https://docs.streamlit.io/)
+- [`pandas`](https://pandas.pydata.org/)
+- [`json`](https://docs.python.org/3/library/json.html)
+- [`re`](https://docs.python.org/3/library/re.html)
+
 安装方式：
 ```bash
 pip install requests beautifulsoup4 selenium webdriver-manager streamlit pandas json re
@@ -39,7 +40,7 @@ pip install requests beautifulsoup4 selenium webdriver-manager streamlit pandas 
 ## 使用说明
 
 1. **运行主程序**
-    - 在 VSCode 或终端运行 `get_citations.py`，自动获取论文的引用数
+    - 在 VSCode 或终端运行 [`get_citations.py`](https://github.com/chenxuanyi-hub/get-citations/blob/main/get_citations.py)，自动获取论文的引用数
     - 运行过程中会弹出 Google Scholar 页面，请手动完成人机验证（约每 280 篇需验证一次）
     - 若验证超时，部分引用数会记为 `null`，并提示超时
 
@@ -52,7 +53,7 @@ pip install requests beautifulsoup4 selenium webdriver-manager streamlit pandas 
     - 按提示输入 `streamlit run website.py`，即可打开本地网页，浏览和搜索论文引用数
 
 3. **更新数据**
-    - 网页内点击“更新”按钮，可自动运行 `get_citations.py` 并刷新数据
+    - 网页内点击“更新”按钮，可自动运行 [`get_citations.py`](https://github.com/chenxuanyi-hub/get-citations/blob/main/get_citations.py) 并刷新数据
 
 ## 注意事项
 
@@ -60,5 +61,4 @@ pip install requests beautifulsoup4 selenium webdriver-manager streamlit pandas 
 - 需手动处理 Google Scholar 的人机验证
 - 若引用数获取失败，将显示为 `null`
 - 可使用 `pip list` 检查依赖库安装情况
-
 
