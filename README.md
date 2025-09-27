@@ -29,12 +29,10 @@
 - [`webdriver-manager`](https://github.com/SergeyPirogov/webdriver_manager)
 - [`streamlit`](https://docs.streamlit.io/)
 - [`pandas`](https://pandas.pydata.org/)
-- [`json`](https://docs.python.org/3/library/json.html)
-- [`re`](https://docs.python.org/3/library/re.html)
 
 安装方式：
 ```bash
-pip install requests beautifulsoup4 selenium webdriver-manager streamlit pandas json re
+pip install requests beautifulsoup4 selenium webdriver-manager streamlit pandas
 ```
 
 ## 使用说明
