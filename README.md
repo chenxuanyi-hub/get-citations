@@ -55,7 +55,6 @@ pip install requests beautifulsoup4 selenium webdriver-manager streamlit pandas
     - 网页内点击“更新”按钮，可自动运行 [`get_citations.py`](https://github.com/chenxuanyi-hub/get-citations/blob/main/get_citations.py) 并刷新数据
 
 ## 注意事项
-
 - 建议使用 Chrome 浏览器，并确保 ChromeDriver 版本与本地浏览器兼容
 - 需手动处理 Google Scholar 的人机验证
 - 若引用数获取失败，将显示为 `null`
